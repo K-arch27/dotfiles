@@ -3,3 +3,5 @@ if status is-interactive
 starship init fish | source
 neofetch
 end
+set -gx WINIT_X11_SCALE_FACTOR 1
+thefuck --alias | source
