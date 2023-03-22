@@ -3,40 +3,46 @@ if status is-interactive
 
 #Alias
 
-#System update & download
 
-alias update="sudo reflector --verbose -c canada --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Sy archlinux-keyring --needed --noconfirm && yay -Su --noconfirm"
+#Package Manager
+alias Mirror="sudo reflector --verbose -c canada --sort rate --save /etc/pacman.d/mirrorlist"
+alias Keyup="sudo pacman -Sy archlinux-keyring --needed --noconfirm"
+alias update="Mirror && Keyup && yay --noconfirm"
 alias pacrm="sudo pacman -Rns"
 alias dl="yay -S"
-alias pacs="yay -Ss"
+alias pacss="yay -Ss"
+alias pacs="pacman -Ss"
+alias cleanup="sudo pacman -Rsn (pacman -Qdtq)"
+alias pacdbfix="sudo rm /var/lib/pacman/db.lck"
 
 #Qol
-alias new="clear && neofetch"
+alias new="clear && neofetch | lolcat"
 alias edit="sudo nano"
+alias kde="startx /kde"
+
 
 #Snapshot management
 alias snaprm="sudo snapper rm"
-alias snapls="sudo snapper list"
+alias snapls="sudo snapper list | lolcat"
 alias snapmk="sudo snapper -v -c root create -t single -d"
 alias regrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-#Cleaning
-alias cleanup="sudo pacman -Rsn (pacman -Qdtq)"
 
 #Archive manager
-alias tarnow=""
-alias untar=""
+alias tarnow="tar -acf"
+alias untar="tar -zxvf"
+
 
 #File manager
-alias ls=""
-alias lt=""
+alias ls="exa -al --color=always --group-directories-first"
+alias lt="exa -aT --level 2 --long --color=always --group-directories-first"
 
 
 #Prompt
 starship init fish | source
 
 #speak for itself
-neofetch
+neofetch | lolcat
 
 # Command helper
 thefuck --alias | source
