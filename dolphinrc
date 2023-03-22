@@ -1,18 +1,17 @@
-[CompactMode]
-FontWeight=50
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
 [DetailsMode]
-FontWeight=50
 PreviewSize=16
 
 [General]
 RememberOpenedTabs=false
 ShowFullPath=true
-Version=201
+ShowFullPathInTitlebar=true
+Version=202
 ViewPropsTimestamp=2022,6,4,16,1,14.618
 
 [IconsMode]
-FontWeight=50
 PreviewSize=48
 
 [KFileDialog Settings]
@@ -20,6 +19,8 @@ Places Icons Auto-resize=false
 Places Icons Static Size=22
 
 [KPropertiesDialog]
+1920x1080 screen: Height=444
+1920x1080 screen: Width=391
 HDMI-0 DVI-I-1 Height 1920x1200=458
 HDMI-0 DVI-I-1 Width 1920x1200=393
 
@@ -32,4 +33,7 @@ CompletionMode=1
 History=kate
 
 [PreviewSettings]
-Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,opendocumentthumbnail,svgthumbnail,windowsexethumbnail,windowsimagethumbnail,directorythumbnail,fontthumbnail
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail
+
+[Search]
+Location=Everywhere
