@@ -5,22 +5,32 @@ if status is-interactive
 
 #System update & download
 
-alias update="sudo reflector --verbose -c canada,usa --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Sy archlinux-keyring --needed --noconfirm && sudo pacman -Su --noconfirm"
-alias dl="sudo pacman -S"
-alias delete="sudo pacman -Rns"
+alias update="sudo reflector --verbose -c canada --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Sy archlinux-keyring --needed --noconfirm && yay -Su --noconfirm"
+alias pacrm="sudo pacman -Rns"
+alias dl="yay -S"
+alias pacs="yay -Ss"
 
 #Qol
 alias new="clear && neofetch"
 alias edit="sudo nano"
 
 #Snapshot management
-alias snapdel="sudo snapper rm"
-alias snaplist="sudo snapper list"
+alias snaprm="sudo snapper rm"
+alias snapls="sudo snapper list"
 alias snapmk="sudo snapper -v -c root create -t single -d"
 alias regrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 #Cleaning
-alias orphandel="sudo pacman -Rsn (pacman -Qdtq)"
+alias cleanup="sudo pacman -Rsn (pacman -Qdtq)"
+
+#Archive manager
+alias tarnow=""
+alias untar=""
+
+#File manager
+alias ls=""
+alias lt=""
+
 
 #Prompt
 starship init fish | source
